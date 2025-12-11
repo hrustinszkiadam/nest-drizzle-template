@@ -4,6 +4,7 @@ import { reset } from 'drizzle-seed';
 import * as schema from './schema';
 import relations from './relations';
 import { DEFAULT_SEED_ROW_COUNT } from './definitions';
+import { faker } from '@faker-js/faker';
 
 const connectionString = process.env.DATABASE_URL;
 const rowsToInsert =
