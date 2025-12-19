@@ -12,8 +12,7 @@ import relations from './lib/relations';
       provide: DATABASE_CONNECTION,
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
-        const connectionString =
-          configService.getOrThrow<string>('DATABASE_URL');
+        const connectionString = configService.getOrThrow<string>('DATABASE_URL');
         const pool = new Pool({
           connectionString,
         });

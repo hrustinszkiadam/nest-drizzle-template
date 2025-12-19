@@ -23,9 +23,7 @@ const db = drizzle(connectionString, {
 });
 
 async function main() {
-  console.log(
-    `Resetting database and seeding data with ${rowsToInsert} rows...`,
-  );
+  console.log(`Resetting database and seeding data with ${rowsToInsert} rows...`);
 
   await reset(db, schema);
 }
